@@ -1,0 +1,19 @@
+<div *ngIf="cars">
+  <div *ngFor="let car of cars">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>
+          {{car.name}}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Id: {{car.id}}</p>
+        <p>Color: {{car.color}}</p>
+        <p>Year: {{car.year}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="accent" [routerLink]="['/carDetail', car.id]">Edit</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
